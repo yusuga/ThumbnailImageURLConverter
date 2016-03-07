@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (nullable NSURL *)thumbnailURLFromURL:(NSURL *)URL;
 + (nullable NSURL *)thumbnailURLFromURL:(NSURL *)URL sizeType:(TIUCSizeType)sizeType;
++ (nullable NSURL *)thumbnailURLFromURL:(NSURL *)URL sizeType:(TIUCSizeType)sizeType serviceType:(TIUCServiceType)serviceType;
 
 @end
 

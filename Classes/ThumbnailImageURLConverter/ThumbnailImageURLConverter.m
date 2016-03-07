@@ -37,7 +37,11 @@ static NSString *kTIUCInstagramDomain = @"instagram.com";
 
 + (nullable NSURL *)thumbnailURLFromURL:(NSURL *)URL sizeType:(TIUCSizeType)sizeType
 {
-    TIUCServiceType serviceType = [URL tiuc_serviceType];
+    return [self thumbnailURLFromURL:URL sizeType:sizeType serviceType:[URL tiuc_serviceType]];
+}
+
++ (nullable NSURL *)thumbnailURLFromURL:(NSURL *)URL sizeType:(TIUCSizeType)sizeType serviceType:(TIUCServiceType)serviceType
+{
     NSString *sizeStr = [self sizeStringWithServiceType:serviceType sizeType:sizeType];
     
     switch (serviceType) {
