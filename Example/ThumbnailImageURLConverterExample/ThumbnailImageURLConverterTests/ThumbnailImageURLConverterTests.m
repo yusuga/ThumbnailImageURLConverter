@@ -72,4 +72,12 @@
     }
 }
 
+- (void)testIgnoreURLOfInstagramUser
+{
+    NSURL *URL = [NSURL URLWithString:kInstagramUserURL];
+    
+    XCTAssertEqual([URL tiuc_serviceType], TIUCServiceUnsupported);
+    XCTAssertNil([ThumbnailImageURLConverter thumbnailURLFromURL:URL]);
+}
+
 @end

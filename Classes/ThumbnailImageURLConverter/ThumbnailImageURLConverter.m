@@ -94,7 +94,6 @@ static NSString *kTIUCInstagramDomain = @"instagram.com";
             break;
     }
     
-    NSAssert(false, @"Unsupported, serviceType: %zd, sizeType: %zd", serviceType, sizeType);
     return nil;
 }
 
@@ -112,7 +111,14 @@ static NSString *kTIUCInstagramDomain = @"instagram.com";
         }        
         return TIUCServiceTwitter;
     } else if ([host hasSuffix:kTIUCInstagramDomain]) {
-        return TIUCServiceInstagram;
+        NSArray<NSString *> *pathComponents = self.pathComponents;
+        if ([pathComponents count] < 2) return TIUCServiceUnsupported;
+        
+        NSString *userName = pathComponents[1];
+        if ([userName isEqualToString:@"p"]) {
+            return TIUCServiceInstagram;
+        }
+        return TIUCServiceUnsupported;
     }
     
     return TIUCServiceUnsupported;

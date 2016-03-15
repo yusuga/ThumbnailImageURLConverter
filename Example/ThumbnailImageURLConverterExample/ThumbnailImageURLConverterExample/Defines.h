@@ -10,3 +10,4 @@
 
 FOUNDATION_EXTERN NSString * const kTwitterURL;
 FOUNDATION_EXTERN NSString * const kInstagramURL;
+FOUNDATION_EXTERN NSString * const kInstagramUserURL;

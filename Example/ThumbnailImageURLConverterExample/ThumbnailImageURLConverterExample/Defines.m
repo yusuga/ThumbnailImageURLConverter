@@ -10,3 +10,4 @@
 
 NSString * const kTwitterURL = @"https://pbs.twimg.com/media/BhxWutnCEAAtEQ6.jpg";
 NSString * const kInstagramURL = @"https://www.instagram.com/p/BCJkUwphQcD/";
+NSString * const kInstagramUserURL = @"https://www.instagram.com/instagram/";
