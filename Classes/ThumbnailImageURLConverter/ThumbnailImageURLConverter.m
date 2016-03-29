@@ -106,9 +106,11 @@ static NSString *kTIUCInstagramDomain = @"instagram.com";
     NSString *host = self.host;
     
     if ([host hasSuffix:kTIUCTwitterDomain]) {
-        if ([host hasPrefix:@"video"]) {
+        if ([host hasPrefix:@"video"] ||
+            [host hasPrefix:@"amp"])
+        {
             return TIUCServiceUnsupported;
-        }        
+        }
         return TIUCServiceTwitter;
     } else if ([host hasSuffix:kTIUCInstagramDomain]) {
         NSArray<NSString *> *pathComponents = self.pathComponents;
