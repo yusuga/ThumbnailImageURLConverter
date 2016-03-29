@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ThumbnailImageURLConverter'
-  s.version = '0.0.3'
+  s.version = '0.0.4'
   s.summary = 'Convert the URL to the thumbnail URL.'
   s.homepage = 'https://github.com/yusuga/ThumbnailImageURLConverter'
   s.license = 'MIT'
